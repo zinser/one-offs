@@ -1,4 +1,4 @@
 one-offs
 ========
 
-woot
+A collection of small scripts.

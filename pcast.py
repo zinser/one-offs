@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 import feedparser, os, urllib2
 
 workdir = '/home/bryan/pcast/'

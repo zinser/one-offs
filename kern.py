@@ -2,6 +2,7 @@ import requests, re, urllib2, subprocess, sys, os
 
 #infile = open('/home/bryan/.kern', 'r+')
 
+
 bufsize = 0
 
 r = requests.get('http://finger.kernel.org/kdist/finger_banner')

@@ -12,3 +12,5 @@ pcast.py - Downloads podcasts from rss feed, checks to see if it exists first.
 pcast_win.py - Windows version, one day I'll get around to merging them
 
 dload.py - simple downloader
+
+kern.py - checks for the latest kernel version

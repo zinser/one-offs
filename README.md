@@ -14,3 +14,5 @@ pcast_win.py - Windows version, one day I'll get around to merging them
 dload.py - simple downloader
 
 kern.py - checks for the latest kernel version
+
+linkern.py - updated version of kern.py

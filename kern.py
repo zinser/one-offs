@@ -8,7 +8,7 @@ bufsize = 0
 r = requests.get('http://finger.kernel.org/kdist/finger_banner')
 sweet = r.content.split('\n')
 for line in sweet:
-    if "3.4" in line:
+    if "stable 3.5" in line:
         blah = re.search(r'(\d+\.\d+\.\d+)', line)
 
 mykernver = subprocess.Popen(['uname', '-r'], stdout=subprocess.PIPE).communicate()
@@ -18,10 +18,10 @@ if mykernver.group(1) == blah.group(0):
     print "UP TO DATE"
 else:
     print "UPDATE TO VERSION {0}".format(blah.group(0))
-    if os.path.exists('/home/bryan/download/linux-' + blah.group(0) + '.tar.bz2') == False:
+    if os.path.exists('/home/bryan/src/linux-' + blah.group(0) + '.tar.bz2') == False:
         print "Downloading..."  
         p = urllib2.urlopen('http://www.kernel.org/pub/linux/kernel/v3.0/linux-' + blah.group(0) + '.tar.bz2')
-        outfile = open('/home/bryan/download/linux-' + blah.group(0) + '.tar.bz2', 'w')
+        outfile = open('/home/bryan/src/linux-' + blah.group(0) + '.tar.bz2', 'w')
         while True:
     	    buffer = p.read(8192)
             if not buffer: break
